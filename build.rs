@@ -6,7 +6,6 @@ fn main() {
     //pkg_config::probe_library("libdlt").unwrap();
 
     println!("cargo:rustc-link-lib=dlt");
-
     println!("cargo:rerun-if-changed=wrapper.h");
 
     let bindings = bindgen::Builder::default()
@@ -18,6 +17,8 @@ fn main() {
         // included header files changed.
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .allowlist_function("dlt_.*")
+        .blocklist_type("_IO*")
+        .newtype_enum("*")
         // Finish the builder and generate the bindings.
         .generate()
         // Unwrap the Result and panic on failure.

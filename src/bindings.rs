@@ -43,64 +43,180 @@ fn bindgen_test_layout_sem_t() {
         )
     );
 }
-pub const DltReturnValue_DLT_RETURN_LOGGING_DISABLED: DltReturnValue = -7;
-pub const DltReturnValue_DLT_RETURN_USER_BUFFER_FULL: DltReturnValue = -6;
-pub const DltReturnValue_DLT_RETURN_WRONG_PARAMETER: DltReturnValue = -5;
-pub const DltReturnValue_DLT_RETURN_BUFFER_FULL: DltReturnValue = -4;
-pub const DltReturnValue_DLT_RETURN_PIPE_FULL: DltReturnValue = -3;
-pub const DltReturnValue_DLT_RETURN_PIPE_ERROR: DltReturnValue = -2;
-pub const DltReturnValue_DLT_RETURN_ERROR: DltReturnValue = -1;
-pub const DltReturnValue_DLT_RETURN_OK: DltReturnValue = 0;
-pub const DltReturnValue_DLT_RETURN_TRUE: DltReturnValue = 1;
-pub type DltReturnValue = ::std::os::raw::c_int;
-pub const DltLogLevelType_DLT_LOG_DEFAULT: DltLogLevelType = -1;
-pub const DltLogLevelType_DLT_LOG_OFF: DltLogLevelType = 0;
-pub const DltLogLevelType_DLT_LOG_FATAL: DltLogLevelType = 1;
-pub const DltLogLevelType_DLT_LOG_ERROR: DltLogLevelType = 2;
-pub const DltLogLevelType_DLT_LOG_WARN: DltLogLevelType = 3;
-pub const DltLogLevelType_DLT_LOG_INFO: DltLogLevelType = 4;
-pub const DltLogLevelType_DLT_LOG_DEBUG: DltLogLevelType = 5;
-pub const DltLogLevelType_DLT_LOG_VERBOSE: DltLogLevelType = 6;
-pub const DltLogLevelType_DLT_LOG_MAX: DltLogLevelType = 7;
-pub type DltLogLevelType = ::std::os::raw::c_int;
-pub const DltFormatType_DLT_FORMAT_DEFAULT: DltFormatType = 0;
-pub const DltFormatType_DLT_FORMAT_HEX8: DltFormatType = 1;
-pub const DltFormatType_DLT_FORMAT_HEX16: DltFormatType = 2;
-pub const DltFormatType_DLT_FORMAT_HEX32: DltFormatType = 3;
-pub const DltFormatType_DLT_FORMAT_HEX64: DltFormatType = 4;
-pub const DltFormatType_DLT_FORMAT_BIN8: DltFormatType = 5;
-pub const DltFormatType_DLT_FORMAT_BIN16: DltFormatType = 6;
-pub const DltFormatType_DLT_FORMAT_MAX: DltFormatType = 7;
-pub type DltFormatType = ::std::os::raw::c_uint;
-pub const DltTraceStatusType_DLT_TRACE_STATUS_DEFAULT: DltTraceStatusType = -1;
-pub const DltTraceStatusType_DLT_TRACE_STATUS_OFF: DltTraceStatusType = 0;
-pub const DltTraceStatusType_DLT_TRACE_STATUS_ON: DltTraceStatusType = 1;
-pub const DltTraceStatusType_DLT_TRACE_STATUS_MAX: DltTraceStatusType = 2;
-pub type DltTraceStatusType = ::std::os::raw::c_int;
-pub const DltNetworkTraceType_DLT_NW_TRACE_IPC: DltNetworkTraceType = 1;
-pub const DltNetworkTraceType_DLT_NW_TRACE_CAN: DltNetworkTraceType = 2;
-pub const DltNetworkTraceType_DLT_NW_TRACE_FLEXRAY: DltNetworkTraceType = 3;
-pub const DltNetworkTraceType_DLT_NW_TRACE_MOST: DltNetworkTraceType = 4;
-pub const DltNetworkTraceType_DLT_NW_TRACE_RESERVED0: DltNetworkTraceType = 5;
-pub const DltNetworkTraceType_DLT_NW_TRACE_RESERVED1: DltNetworkTraceType = 6;
-pub const DltNetworkTraceType_DLT_NW_TRACE_RESERVED2: DltNetworkTraceType = 7;
-pub const DltNetworkTraceType_DLT_NW_TRACE_USER_DEFINED0: DltNetworkTraceType = 8;
-pub const DltNetworkTraceType_DLT_NW_TRACE_USER_DEFINED1: DltNetworkTraceType = 9;
-pub const DltNetworkTraceType_DLT_NW_TRACE_USER_DEFINED2: DltNetworkTraceType = 10;
-pub const DltNetworkTraceType_DLT_NW_TRACE_USER_DEFINED3: DltNetworkTraceType = 11;
-pub const DltNetworkTraceType_DLT_NW_TRACE_USER_DEFINED4: DltNetworkTraceType = 12;
-pub const DltNetworkTraceType_DLT_NW_TRACE_USER_DEFINED5: DltNetworkTraceType = 13;
-pub const DltNetworkTraceType_DLT_NW_TRACE_USER_DEFINED6: DltNetworkTraceType = 14;
-pub const DltNetworkTraceType_DLT_NW_TRACE_RESEND: DltNetworkTraceType = 15;
-pub const DltNetworkTraceType_DLT_NW_TRACE_MAX: DltNetworkTraceType = 16;
-pub type DltNetworkTraceType = ::std::os::raw::c_uint;
-pub const DltUserLogMode_DLT_USER_MODE_UNDEFINED: DltUserLogMode = -1;
-pub const DltUserLogMode_DLT_USER_MODE_OFF: DltUserLogMode = 0;
-pub const DltUserLogMode_DLT_USER_MODE_EXTERNAL: DltUserLogMode = 1;
-pub const DltUserLogMode_DLT_USER_MODE_INTERNAL: DltUserLogMode = 2;
-pub const DltUserLogMode_DLT_USER_MODE_BOTH: DltUserLogMode = 3;
-pub const DltUserLogMode_DLT_USER_MODE_MAX: DltUserLogMode = 4;
-pub type DltUserLogMode = ::std::os::raw::c_int;
+impl DltReturnValue {
+    pub const DLT_RETURN_LOGGING_DISABLED: DltReturnValue = DltReturnValue(-7);
+}
+impl DltReturnValue {
+    pub const DLT_RETURN_USER_BUFFER_FULL: DltReturnValue = DltReturnValue(-6);
+}
+impl DltReturnValue {
+    pub const DLT_RETURN_WRONG_PARAMETER: DltReturnValue = DltReturnValue(-5);
+}
+impl DltReturnValue {
+    pub const DLT_RETURN_BUFFER_FULL: DltReturnValue = DltReturnValue(-4);
+}
+impl DltReturnValue {
+    pub const DLT_RETURN_PIPE_FULL: DltReturnValue = DltReturnValue(-3);
+}
+impl DltReturnValue {
+    pub const DLT_RETURN_PIPE_ERROR: DltReturnValue = DltReturnValue(-2);
+}
+impl DltReturnValue {
+    pub const DLT_RETURN_ERROR: DltReturnValue = DltReturnValue(-1);
+}
+impl DltReturnValue {
+    pub const DLT_RETURN_OK: DltReturnValue = DltReturnValue(0);
+}
+impl DltReturnValue {
+    pub const DLT_RETURN_TRUE: DltReturnValue = DltReturnValue(1);
+}
+#[repr(transparent)]
+#[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
+pub struct DltReturnValue(pub ::std::os::raw::c_int);
+impl DltLogLevelType {
+    pub const DLT_LOG_DEFAULT: DltLogLevelType = DltLogLevelType(-1);
+}
+impl DltLogLevelType {
+    pub const DLT_LOG_OFF: DltLogLevelType = DltLogLevelType(0);
+}
+impl DltLogLevelType {
+    pub const DLT_LOG_FATAL: DltLogLevelType = DltLogLevelType(1);
+}
+impl DltLogLevelType {
+    pub const DLT_LOG_ERROR: DltLogLevelType = DltLogLevelType(2);
+}
+impl DltLogLevelType {
+    pub const DLT_LOG_WARN: DltLogLevelType = DltLogLevelType(3);
+}
+impl DltLogLevelType {
+    pub const DLT_LOG_INFO: DltLogLevelType = DltLogLevelType(4);
+}
+impl DltLogLevelType {
+    pub const DLT_LOG_DEBUG: DltLogLevelType = DltLogLevelType(5);
+}
+impl DltLogLevelType {
+    pub const DLT_LOG_VERBOSE: DltLogLevelType = DltLogLevelType(6);
+}
+impl DltLogLevelType {
+    pub const DLT_LOG_MAX: DltLogLevelType = DltLogLevelType(7);
+}
+#[repr(transparent)]
+#[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
+pub struct DltLogLevelType(pub ::std::os::raw::c_int);
+impl DltFormatType {
+    pub const DLT_FORMAT_DEFAULT: DltFormatType = DltFormatType(0);
+}
+impl DltFormatType {
+    pub const DLT_FORMAT_HEX8: DltFormatType = DltFormatType(1);
+}
+impl DltFormatType {
+    pub const DLT_FORMAT_HEX16: DltFormatType = DltFormatType(2);
+}
+impl DltFormatType {
+    pub const DLT_FORMAT_HEX32: DltFormatType = DltFormatType(3);
+}
+impl DltFormatType {
+    pub const DLT_FORMAT_HEX64: DltFormatType = DltFormatType(4);
+}
+impl DltFormatType {
+    pub const DLT_FORMAT_BIN8: DltFormatType = DltFormatType(5);
+}
+impl DltFormatType {
+    pub const DLT_FORMAT_BIN16: DltFormatType = DltFormatType(6);
+}
+impl DltFormatType {
+    pub const DLT_FORMAT_MAX: DltFormatType = DltFormatType(7);
+}
+#[repr(transparent)]
+#[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
+pub struct DltFormatType(pub ::std::os::raw::c_uint);
+impl DltTraceStatusType {
+    pub const DLT_TRACE_STATUS_DEFAULT: DltTraceStatusType = DltTraceStatusType(-1);
+}
+impl DltTraceStatusType {
+    pub const DLT_TRACE_STATUS_OFF: DltTraceStatusType = DltTraceStatusType(0);
+}
+impl DltTraceStatusType {
+    pub const DLT_TRACE_STATUS_ON: DltTraceStatusType = DltTraceStatusType(1);
+}
+impl DltTraceStatusType {
+    pub const DLT_TRACE_STATUS_MAX: DltTraceStatusType = DltTraceStatusType(2);
+}
+#[repr(transparent)]
+#[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
+pub struct DltTraceStatusType(pub ::std::os::raw::c_int);
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_IPC: DltNetworkTraceType = DltNetworkTraceType(1);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_CAN: DltNetworkTraceType = DltNetworkTraceType(2);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_FLEXRAY: DltNetworkTraceType = DltNetworkTraceType(3);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_MOST: DltNetworkTraceType = DltNetworkTraceType(4);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_RESERVED0: DltNetworkTraceType = DltNetworkTraceType(5);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_RESERVED1: DltNetworkTraceType = DltNetworkTraceType(6);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_RESERVED2: DltNetworkTraceType = DltNetworkTraceType(7);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_USER_DEFINED0: DltNetworkTraceType = DltNetworkTraceType(8);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_USER_DEFINED1: DltNetworkTraceType = DltNetworkTraceType(9);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_USER_DEFINED2: DltNetworkTraceType = DltNetworkTraceType(10);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_USER_DEFINED3: DltNetworkTraceType = DltNetworkTraceType(11);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_USER_DEFINED4: DltNetworkTraceType = DltNetworkTraceType(12);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_USER_DEFINED5: DltNetworkTraceType = DltNetworkTraceType(13);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_USER_DEFINED6: DltNetworkTraceType = DltNetworkTraceType(14);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_RESEND: DltNetworkTraceType = DltNetworkTraceType(15);
+}
+impl DltNetworkTraceType {
+    pub const DLT_NW_TRACE_MAX: DltNetworkTraceType = DltNetworkTraceType(16);
+}
+#[repr(transparent)]
+#[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
+pub struct DltNetworkTraceType(pub ::std::os::raw::c_uint);
+impl DltUserLogMode {
+    pub const DLT_USER_MODE_UNDEFINED: DltUserLogMode = DltUserLogMode(-1);
+}
+impl DltUserLogMode {
+    pub const DLT_USER_MODE_OFF: DltUserLogMode = DltUserLogMode(0);
+}
+impl DltUserLogMode {
+    pub const DLT_USER_MODE_EXTERNAL: DltUserLogMode = DltUserLogMode(1);
+}
+impl DltUserLogMode {
+    pub const DLT_USER_MODE_INTERNAL: DltUserLogMode = DltUserLogMode(2);
+}
+impl DltUserLogMode {
+    pub const DLT_USER_MODE_BOTH: DltUserLogMode = DltUserLogMode(3);
+}
+impl DltUserLogMode {
+    pub const DLT_USER_MODE_MAX: DltUserLogMode = DltUserLogMode(4);
+}
+#[repr(transparent)]
+#[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
+pub struct DltUserLogMode(pub ::std::os::raw::c_int);
 pub type float32_t = f32;
 pub type FILE = _IO_FILE;
 #[repr(C)]
@@ -461,9 +577,15 @@ pub type speed_t = ::std::os::raw::c_uint;
 extern "C" {
     pub fn dlt_get_service_name(id: ::std::os::raw::c_uint) -> *const ::std::os::raw::c_char;
 }
-pub const DltReceiverType_DLT_RECEIVE_SOCKET: DltReceiverType = 0;
-pub const DltReceiverType_DLT_RECEIVE_FD: DltReceiverType = 1;
-pub type DltReceiverType = ::std::os::raw::c_uint;
+impl DltReceiverType {
+    pub const DLT_RECEIVE_SOCKET: DltReceiverType = DltReceiverType(0);
+}
+impl DltReceiverType {
+    pub const DLT_RECEIVE_FD: DltReceiverType = DltReceiverType(1);
+}
+#[repr(transparent)]
+#[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
+pub struct DltReceiverType(pub ::std::os::raw::c_uint);
 #[repr(C, packed)]
 #[derive(Debug, Copy, Clone)]
 pub struct DltStorageHeader {
@@ -2747,11 +2869,21 @@ extern "C" {
 extern "C" {
     pub fn dlt_user_log_resend_buffer() -> DltReturnValue;
 }
-pub const DltClientMode_DLT_CLIENT_MODE_UNDEFINED: DltClientMode = -1;
-pub const DltClientMode_DLT_CLIENT_MODE_TCP: DltClientMode = 0;
-pub const DltClientMode_DLT_CLIENT_MODE_SERIAL: DltClientMode = 1;
-pub const DltClientMode_DLT_CLIENT_MODE_UNIX: DltClientMode = 2;
-pub type DltClientMode = ::std::os::raw::c_int;
+impl DltClientMode {
+    pub const DLT_CLIENT_MODE_UNDEFINED: DltClientMode = DltClientMode(-1);
+}
+impl DltClientMode {
+    pub const DLT_CLIENT_MODE_TCP: DltClientMode = DltClientMode(0);
+}
+impl DltClientMode {
+    pub const DLT_CLIENT_MODE_SERIAL: DltClientMode = DltClientMode(1);
+}
+impl DltClientMode {
+    pub const DLT_CLIENT_MODE_UNIX: DltClientMode = DltClientMode(2);
+}
+#[repr(transparent)]
+#[derive(Debug, Copy, Clone, Hash, PartialEq, Eq)]
+pub struct DltClientMode(pub ::std::os::raw::c_int);
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
 pub struct DltClient {
